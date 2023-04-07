@@ -1,0 +1,9 @@
+pyrogram
+TgCrypto
+psycopg2-binary
+https://github.com/rahulps1000/pyropatch/archive/master.zip
+pymongo
+dnspython
+asyncio
+aiofiles
+python-dotenv
