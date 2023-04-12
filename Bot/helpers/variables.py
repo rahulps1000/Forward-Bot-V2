@@ -35,3 +35,20 @@ class Variables:
     text = variable_property('text')
     tag = variable_property('tag')
     count = variable_property('count', default=0)
+
+    def reset_all(self):
+        self.status = 'stopped'
+        self.time = None
+        self.from_chat = None
+        self.to_chat = None
+        self.from_msg = 0
+        self.to_msg = 0
+        self.last_msg = 0
+        self.all = None
+        self.photo = None
+        self.video = None
+        self.audio = None
+        self.document = None
+        self.text = None
+        self.tag = None
+        self.count = 0
