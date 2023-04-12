@@ -7,7 +7,7 @@ class Config(object):
     APP_ID = int(environ.get("APP_ID", None))
     API_HASH = environ.get("API_HASH", None)
     BOT_TOKEN = environ.get("BOT_TOKEN", None)
-    BOT_WORKERS = int(environ.get("BOT_WORKERS", 4))
+    BOT_WORKERS = int(environ.get("BOT_WORKERS", 40))
     SUDO_USERS = environ.get("SUDO_USERS", None)
     DB_URI = environ.get("DB_URI", None)
     SESSION_NAME = environ.get("SESSION_NAME", "test")
