@@ -4,6 +4,7 @@ The bot is not fully completed or tested. It may have bugs. If you find any bugs
 Detailed documentation will be added soon.
 
 ## Config Vars
+Create a .env file the follwing variables
 ```
 API_ID: Get this value from my.telegram.org
 API_HASH: Get this value from my.telegram.org
@@ -14,3 +15,7 @@ DB_URI: MongoDB URI
 SESSION_NAME: Name of the Pyrogram session
 MULTI_USER_MODE: Whether to run the bot in multi-user mode
 ```
+
+OR 
+
+Rename sample_config.py to bot_config.py and fill in the values
