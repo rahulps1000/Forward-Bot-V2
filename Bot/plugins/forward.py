@@ -5,7 +5,7 @@ from pyrogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineK
 from Bot.helpers import Variables, generate_settings, forward
 from Bot.customisation import already_forwarding_text
 
-@CodeXBotz.on_message(filters.command('forward','To intialise a forward task') & filters.private)
+@CodeXBotz.on_message(filters.command('forward','To intialise a forward task') & filters.private & filters.admin)
 async def forward_cmd(bot: CodeXBotz, message: Message):
     vars = Variables(message.from_user.id)
     if vars.status == 'forwarding':
@@ -70,7 +70,7 @@ async def forward_start(bot: CodeXBotz, update:CallbackQuery):
         await update.answer('Already an instance if Forwarding.',show_alert=True)
 
 # this command will be removed in fututre and auto continue will be added
-@CodeXBotz.on_message(filters.command('continue') & filters.private)
+@CodeXBotz.on_message(filters.command('continue') & filters.private  & filters.admin)
 async def continue_cmd(bot: CodeXBotz, message: Message):
     vars = Variables(message.from_user.id)
     if vars.status == 'forwarding':

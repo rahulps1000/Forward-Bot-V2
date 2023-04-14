@@ -31,6 +31,14 @@ async def about(client: CodeXBotz, message: Message):
         reply_markup=InlineKeyboardMarkup(about_keyboard)
     )
 
+@CodeXBotz.on_message(filters.private & ~filters.admin)
+async def not_admin(client: CodeXBotz, message: Message):
+    await message.reply(
+        text="You are not an admin of this bot",
+        quote=True
+    )
+    return
+
 
 @CodeXBotz.on_callback_query(filters.regex('^about|help|close$'))
 async def callback(client: CodeXBotz, query):
